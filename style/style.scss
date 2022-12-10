@@ -1,0 +1,154 @@
+// Google Font
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro&family=Lora:ital@1&family=Montserrat&display=swap');
+
+:root{
+    //-------------------------------- HEADER -----------------------------------
+
+    --header-heigh: 56px;
+
+    // -------------------------------- COLOR -----------------------------------
+
+    /*Color mode HSL Chue, saturation, lightness)*/
+    --first-color: #6BABDF;
+    --title-color: #3F4244;
+    --text-color: #44474A;
+    --text-color-light: #8A8F93;
+    --body-color: #FCFCFC;
+    --container-color: #F1F2F2;
+
+    --gradient-color: linear-gradient (180deg, hsla(207, 48%, 72%, 0), hsla(207, 65%, 65%, 1));
+
+     
+
+    //-------------------------------- Font and typography -----------------------------------
+
+    --body-font: 'Montserrat', sans-serif;
+    --title-font: 'Lora', serif;
+    --khmer-font: 'Kantumruy Pro', sans-serif;
+    --biggest-font-size: 24px;
+    --hi-font-size: 24px;
+    --h2-font-size: 20px;
+    --h3-font-size: 16px;
+    --normal-font-size: 15px;
+    --small-font-size: 13px;
+    --smaller-font-size: 12px;
+    --tiny-font-size: 10px;
+
+    //-------------------------------- Font Weight -----------------------------------
+
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    //-------------------------------- Font Weight -----------------------------------
+    --z-normal: 1;
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+// *RESPONSIVE TYPHOGRAPHY
+@media screen and (min-width: 1024px){
+    :root{
+        --biggest-font-size: 48px;
+        --h1-font-size: 36px;
+        --h2-font-size: 24px;
+        --h3-font-size: 20px;
+        --normal-font-size: 16px;
+        --small-font-size: 14px;
+        --smaller-font-size: 13px;
+        --tiny-font-size: 11px;
+    }
+}
+
+//-------------------------------- Base -----------------------------------
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,h2,h3{
+    color: var(--title-color);
+    font-family: var(--title-font);
+    font-weight: var(--font-medium);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+//-------------------------------- Theme -----------------------------------
+
+//-------------------------------- Variable Dark Theme -----------------------------------
+
+//-------------------------------- Color Change in Same Part of the Website, in the light theme -----------------------------------
+
+//-------------------------------- Reusable CSS Classe -----------------------------------
+.container{
+    max-width: 1024px;
+    margin-inline: 24px;
+}
+
+.grid{
+    display: grid;
+    gap: 24px;
+}
+
+.section{
+    padding-block: 40px;
+}
+
+.section__border{
+    border-bottom: 1px solid var(--title-color);
+    padding-bottom: 56px;
+}
+
+.section__title, .section__subtitle{
+    text-align: center;
+}
+
+.section__title{
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 4px;
+}
+
+.section__subtitle{
+    display: block;
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+    margin-bottom: 48px;
+}
+
+.main{
+    overflow: hidden; 
+}
+
+// show menu
+
+// Active Link
+
+//-------------------------------- Home -----------------------------------
+
+//-------------------------------- Skill -----------------------------------
+
+// Animation Skill
