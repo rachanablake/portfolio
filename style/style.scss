@@ -1,5 +1,6 @@
 // Google Font
 @import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro&family=Lora:ital@1&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Courgette&family=Kalam&display=swap');
 
 :root{
     //-------------------------------- HEADER -----------------------------------
@@ -24,6 +25,7 @@
 
     --body-font: 'Montserrat', sans-serif;
     --title-font: 'Lora', serif;
+    // --title-font: 'Kalam', cursive;
     --khmer-font: 'Kantumruy Pro', sans-serif;
     --biggest-font-size: 24px;
     --hi-font-size: 24px;
@@ -151,6 +153,7 @@ img{
     left: 0;
     z-index: var(--z-fixed);
 }
+
 .nav{
     height: calc(var(--header-height) + 8px);
     display: flex;
@@ -233,7 +236,190 @@ img{
 // Active Link
 
 //-------------------------------- Home -----------------------------------
+.home__container{
+    row-gap: 64px;
+    padding-top: 32px;
+}
+
+.home__data{
+    row-gap: 24px;
+}
+
+.home__title{
+    text-align: center;
+    font-size: var(--biggest-font-size);
+    letter-spacing: .3px;
+    margin-bottom: 4px;
+}
+
+.home__blob{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: var(--body-color);
+    border: 2px solid var(--text-color-light);
+    justify-self: center;
+    border-radius: 100px;
+    place-items: center;
+}
+
+.home__profil{
+    width: 180px;
+    height: 180px;
+    background: var(--gradient-color);
+    border-radius: 88px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+// // .home__profil img{
+// //     width: 150px;
+// // }
+
+.home__shape-wave, .home__shape-circle{
+    position: absolute;
+    opacity: .1;
+    z-index: -1;
+}
+
+.home__shape-wave{
+    width: 100px;
+    left: -24px;
+    top: 80px;
+}
+
+.home__shape-circle{
+    width: 100px;
+    bottom: -32px;
+    right: -48px;
+    // z-index: -1;
+}
+
+.home__social{
+    justify-self: center;
+    display: flex;
+    column-gap: 18px;
+}
+
+.home__social-link{
+    font-size: 32px;
+    color: var(--text-color-light);
+    transition: color .3s;
+}
+
+.home__social-link:hover{
+    color: var(--title-color);
+}
+
+.home__info{
+    display: grid;
+    row-gap: 32px;
+}
+
+.home__info-title{
+    font-family: var(--body-font);
+    font-size: var(--smaller-font-size);
+    font-weight: 400;
+    color: var(--text-color-light);
+    margin-bottom: 18px;
+}
+
+.home__info-description, .home__info-number{
+    font-family: var(--title-font);
+    color: var(--title-color);
+}
+
+.home__info-description{
+    padding-right: 64px;
+}
+
+.home__info-number{
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+}
 
 //-------------------------------- Skill -----------------------------------
+.skills__container{
+    row-gap: 56px;
+}
+
+.skills__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 40px;
+}
+
+.skills__title i{
+    font-size: 16px;
+    font-weight: initial;
+}
+
+.skills__info, .skills__data, .skills__blob{
+    display: grid;
+}
+
+.skills__info{
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 32px;
+}
+
+.skills__data{
+    justify-content: center;
+    text-align: center;
+}
+
+.skills__blob{
+    width: 100px;
+    height: 100px;
+    background-color: var(--container-color);
+    border-radius: 100px;
+    place-items: center;
+    margin-bottom: 18px;
+}
+
+.skills__blob img{
+    width: 60px;
+}
+
+.skills__name{
+    font-size: var(--small-font-size);
+    margin-bottom: 4px;
+}
+
+.skills__subtitle{
+    font-size: var(--tiny-font-size);
+    color: var(--text-color-light);
+}
 
 // Animation Skill
+.skills__blob:hover img{
+    animation: bounce-skills .6s
+}
+
+@keyframes bounce-skills{
+    0%{
+        transform: translate(0);
+    }
+
+    20%{
+        transform: translateY(-6px);
+    }
+
+    30%{
+        transform: translate(0);
+    }
+
+    60%{
+        transform: translateY(-3px);
+    }
+
+    80%{
+        transform: translate(0);
+    }
+}
