@@ -4,12 +4,12 @@
 :root{
     //-------------------------------- HEADER -----------------------------------
 
-    --header-heigh: 56px;
+    --header-height: 56px;
 
     // -------------------------------- COLOR -----------------------------------
 
     /*Color mode HSL Chue, saturation, lightness)*/
-    --first-color: #6BABDF;
+    --first-color: #1F5BD3;
     --title-color: #3F4244;
     --text-color: #44474A;
     --text-color-light: #8A8F93;
@@ -143,7 +143,92 @@ img{
     overflow: hidden; 
 }
 
+//-------------------------------- Header & Nav -----------------------------------
+.header{
+    width: 100%;
+    position: fixed;
+    bottom: 32px;
+    left: 0;
+    z-index: var(--z-fixed);
+}
+.nav{
+    height: calc(var(--header-height) + 8px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--body-color);
+    box-shadow: 0 4px 20px hsla(207, 24%, 35%, .1);
+    padding-inline: 24px;
+    border-radius: 15px;
+}
+
+.nav__logo, .nav__toggle, .nav__close{
+    color: var(--title-color);
+}
+
+.nav__logo{
+    font-family: var(--title-font);
+    font-weight: var(--font-medium);
+}
+
+.nav__toggle{
+    display: flex;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1023px){
+    .nav__menu{
+        position: fixed;
+        width: 88%;
+        left: 0;
+        right: 0;
+        bottom: -60%;
+        margin: auto;
+        background-color: var(--body-color);
+        box-shadow: 0 4px 20px hsla(207, 24%, 35%, .1);
+        padding: 32px 24px 80px;
+        border-radius: 15px;
+        transition: bottom .3s;
+    }
+}
+
+.nav__list{
+    grid-template-columns: repeat(3, max-content);
+    justify-content: center;
+    gap: 32px 48px
+}
+
+.nav__link{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 4px;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+    transition: color .3s;
+}
+
+.nav__link:hover{
+    color: var(--title-color);
+}
+
+.nav__link i{
+    font-size: 24px;
+}
+
+.nav__close{
+    position: absolute;
+    right: 24px;
+    bottom: 11.2px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
 // show menu
+.show-menu{
+    bottom: 32px;
+} 
 
 // Active Link
 
