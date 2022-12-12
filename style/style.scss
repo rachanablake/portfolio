@@ -423,3 +423,56 @@ img{
         transform: translate(0);
     }
 }
+
+//-------------------------------- Qualification -----------------------------------
+.qualification{
+    position: relative;
+}
+
+.qualification__container{
+    row-gap: 60px;
+}
+
+.qualification__title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 8px;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 32px;
+}
+
+.qualification__title i{
+    font-size: 18px;
+    font-weight: initial;
+}
+
+.qualification__info{
+    display: grid;
+    row-gap: 36px;
+}
+
+.qualification__name{
+    font-size: var(--normal-font-size);
+    margin-bottom: 22px;
+}
+
+.qualification__country, .qualification__year{
+    display: block;
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.qualification__country{
+    margin-bottom: 12px;
+}
+
+.qualification__img{
+    width: 150px;
+    position: absolute;
+    right: -56px;
+    bottom: 192px;
+    transform: rotate(15deg);
+    opacity: .1;
+}
