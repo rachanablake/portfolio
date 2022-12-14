@@ -528,3 +528,60 @@ img{
 .services__card:hover .services__border{
     opacity: 1;
 }
+
+//-------------------------------- Project -----------------------------------
+.projects__container{
+    overflow: inherit;
+}
+
+.projects__container{
+    display: grid;
+    justify-content: center;
+}
+
+.projects__image{
+    width: 250px;
+    border-radius: 4px;
+    margin-bottom: 18px;
+}
+
+.projects__subtitle{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.projects__title{
+    font-size: var(--h2-font-size);
+    margin-bottom: 18px;
+    margin: 8px 0 18px;
+}
+
+.projects__button{
+    display: inline-flex;
+    align-items: center;
+    column-gap: 8px;
+    color: var(--title-color);
+    font-size: var(--small-font-size);
+}
+
+.projects__button i{
+    font-size: 18px;
+    transition: transform ,3s;
+}
+
+.projects__button:hover i{
+    transform: translateX(4px);
+}
+
+.project__container .swiper-butuuon-prev, .projects__container, .swiper-button_nex{
+    width: initial;
+    height: inherit;
+    margin: initial;
+    font-size: 40px;
+    color: var(--title-color);
+}
+
+.projects__container .swiper-button-nex{
+    right: -16px;
+    top: 72px;
+}
