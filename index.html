@@ -13,7 +13,10 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/791db4ad4b.js" crossorigin="anonymous"></script>
 
-    <!-------------------------------- SWIPPERICON --------------------------------->
+    <!-------------------------------- SWIPER CSS --------------------------------->
+    <link rel="stylesheet" href="./style/swiper-bundle.min.css">
+
+    <!-------------------------------- SWIPERICON --------------------------------->
 
     <!----------------------------------- CSS -------------------------------------->
     <link rel="stylesheet" href="./style/style.css">
@@ -73,7 +76,7 @@
             </div>
             <div class="nav__button">
                 <!-- Change theme button -->
-                <!-- <i class="ri-moon-line change-theme" id="theme-button"></i> -->
+                <!-- <i class="ri-moon-line change-theme" id="theme-button"></i>
 
                 <!-- Toggle Button -->
                 <div class="nav__toggle" id="nav-toggle">
@@ -452,90 +455,174 @@
             </div>
         </section>
 
-    </main>
+        <!-- ====================== PROJECT =========================== -->
+        <section class="projects section" id="projects">
+            <h2 class="section__title">Projeccts</h2>
+            <span class="section__subtitle">Most recent work</span>
 
-    <!-- ====================== PROJECT =========================== -->
-    <section class="projects section" id="projects">
-        <h2 class="section__title">Projeccts</h2>
-        <span class="section__subtitle">Most recent work</span>
+            <div class="container section__border">
+                <div class="projects__container swiper">
+                    <div class="swiper-wrapper">
 
-        <div class="container section__border">
-            <div class="projects__container">
+                        <!-- ====================== PROJECT 1 =========================== -->
+                        <div class="projects__content swiper-slide">
+                            <img src="./images/illustrator.svg" alt="Projects Image" class="projects__image">
 
-                <div>
-                    <!-- ====================== PROJECT 1 =========================== -->
-                    <div class="projects__content">
-                        <img src="./images/illustrator.svg" alt="Projects Image" class="projects__image">
+                            <div>
+                                <span class="projects__subtitle">Web</span>
+                                <h1 class="projects__title">E-Commerce Store</h1>
 
-                        <div>
-                            <span class="projects__subtitle">Web</span>
-                            <h1 class="projects__title">E-Commerce Store</h1>
+                                <a href="#" class="projects__button">
+                                    View Demoo <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
+                        </div>
 
-                            <a href="#" class="projects__button">
-                                View Demoo <i class="ri-arrow-right-line"></i>
-                            </a>
+                        <!-- ====================== PROJECT 2 =========================== -->
+                        <div class="projects__content swiper-slide">
+                            <img src="./images/illustrator.svg" alt="Projects Image" class="projects__image">
+
+                            <div>
+                                <span class="projects__subtitle">Animation</span>
+                                <h1 class="projects__title">Animation Project</h1>
+
+                                <a href="#" class="projects__button">
+                                    View Demoo <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- ====================== PROJECT 3 =========================== -->
+                        <div class="projects__content swiper-slide">
+                            <img src="./images/illustrator.svg" alt="Projects Image" class="projects__image">
+
+                            <div>
+                                <span class="projects__subtitle">Design</span>
+                                <h1 class="projects__title">Application Design</h1>
+
+                                <a href="#" class="projects__button">
+                                    View Demoo <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- ====================== PROJECT 4 =========================== -->
+                        <div class="projects__content swiper-slide">
+                            <img src="./images/illustrator.svg" alt="Projects Image" class="projects__image">
+
+                            <div>
+                                <span class="projects__subtitle">Web</span>
+                                <h1 class="projects__title">Modern Website</h1>
+
+                                <a href="#" class="projects__button">
+                                    View Demoo <i class="ri-arrow-right-line"></i>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <div>
-                    <!-- ====================== PROJECT 2 =========================== -->
-                    <div class="projects__content">
-                        <img src="./images/illustrator.svg" alt="Projects Image" class="projects__image">
-
-                        <div>
-                            <span class="projects__subtitle">Animation</span>
-                            <h1 class="projects__title">Animation Project</h1>
-
-                            <a href="#" class="projects__button">
-                                View Demoo <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
+                    <!-- Swipper arrows -->
+                    <div class="swiper-button-next">
+                        <i class="ri-arrow-right-s-line"></i>
                     </div>
-                </div>
-
-                <div>
-                    <!-- ====================== PROJECT 3 =========================== -->
-                    <div class="projects__content">
-                        <img src="./images/illustrator.svg" alt="Projects Image" class="projects__image">
-
-                        <div>
-                            <span class="projects__subtitle">Design</span>
-                            <h1 class="projects__title">Application Design</h1>
-
-                            <a href="#" class="projects__button">
-                                View Demoo <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
+                    <div class="swiper-button-prev">
+                        <i class="ri-arrow-left-s-line"></i>
                     </div>
+                    <div class="swiper-pagination"></div>
+
                 </div>
-
-                <div>
-                    <!-- ====================== PROJECT 4 =========================== -->
-                    <div class="projects__content">
-                        <img src="./images/illustrator.svg" alt="Projects Image" class="projects__image">
-
-                        <div>
-                            <span class="projects__subtitle">Web</span>
-                            <h1 class="projects__title">Modern Website</h1>
-
-                            <a href="#" class="projects__button">
-                                View Demoo <i class="ri-arrow-right-line"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
             </div>
-        </div>
-    </section>
+        </section>
 
 
-    <!-- ====================== TEST IMONIAL =========================== -->
+        <!-- ====================== TESTIMONIAL =========================== -->
+        <section class="testimonial section">
+            <h2 class="section__title">estimonial</h2>
+            <span class="section__subtitle">My client saying</span>
 
-    
-    <!-- ====================== CONTACT =========================== -->
-    
+            <div class="container section__border">
+                <div class="testimonial__container swiper">
+                    <div class="swiper-wrapper">
+
+                        <!-- ====================== TESTIMONIAL 1 =========================== -->
+                        <div class="testimonial__content swiper-slide">
+                            <p class="testimonial__description swiper-slide">
+                                "Working with Rachana is to give a good
+                                impression, I carry out my project at a good
+                                cost, with ecvellent quality and attention.
+                                Great service and recommenede."
+                            </p>
+
+                            <div class="">
+                                <h3 class="testimonial__name">Sor Rachana</h3>
+                                <span class="testimonial__subtitle">Client</span>
+                            </div>
+                        </div>
+
+                        <!-- ====================== TESTIMONIAL 2 =========================== -->
+                        <div class="testimonial__content swiper-slide">
+                            <p class="testimonial__description swiper-slide">
+                                "Working with Rachana is to give a good
+                                impression, I carry out my project at a good
+                                cost, with ecvellent quality and attention.
+                                Great service and recommenede."
+                            </p>
+
+                            <div class="">
+                                <h3 class="testimonial__name">Sor Rachana</h3>
+                                <span class="testimonial__subtitle">Client</span>
+                            </div>
+                        </div>
+
+                        <!-- ====================== TESTIMONIAL 3 =========================== -->
+                        <div class="testimonial__content swiper-slide">
+                            <p class="testimonial__description swiper-slide">
+                                "Working with Rachana is to give a good
+                                impression, I carry out my project at a good
+                                cost, with ecvellent quality and attention.
+                                Great service and recommenede."
+                            </p>
+
+                            <div class="">
+                                <h3 class="testimonial__name">Sor Rachana</h3>
+                                <span class="testimonial__subtitle">Client</span>
+                            </div>
+                        </div>
+
+                        <!-- ====================== TESTIMONIAL 4 =========================== -->
+                        <div class="testimonial__content swiper-slide">
+                            <p class="testimonial__description swiper-slide">
+                                "Working with Rachana is to give a good
+                                impression, I carry out my project at a good
+                                cost, with ecvellent quality and attention.
+                                Great service and recommenede."
+                            </p>
+
+                            <div class="">
+                                <h3 class="testimonial__name">Sor Rachana</h3>
+                                <span class="testimonial__subtitle">Client</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Swipper arrows -->
+                    <div class="swiper-button-next">
+                        <i class="ri-arrow-right-s-line"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="ri-arrow-left-s-line"></i>
+                    </div>
+
+                </div>
+            </div>
+
+            <img src="./images/wave.svg" alt="terstimonial image" class="testimonial__img">
+
+        </section>
+
+        <!-- ====================== CONTACT =========================== -->
+
+    </main>
 
     <!-- ====================== FOOTER =========================== -->
     <footer class="footer">
@@ -547,7 +634,7 @@
     <!-- ====================== SCROLLREVEAL =========================== -->
     <script src=""></script>
     <!-- ====================== SWIPER JS =========================== -->
-    <script src=""></script>
+    <script src="./style/swiper-bundle.min.js"></script>
     <!-- ====================== EMAIL JS =========================== -->
 
     <!-- ====================== MAIN JS =========================== -->

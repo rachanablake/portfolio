@@ -26,6 +26,32 @@ const linkAction = () =>{
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
+// ----------------------- SWTPER PROJECT ----------------------------
+let swiperProjects = new Swiper(".projects__container", {
+    loop: true,
+    spaceBetween: 24,
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    mousewheel: false,
+    keyboard: true,
+});
+
+// ----------------------- TESTIMONIAL ----------------------------
+let swiperTestimonial = new Swiper(".testimonial__container", {
+    grabCursor: true,
+
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
 // ----------------------- SHOW MENU ----------------------------
 
 // ----------------------- SHOW MENU ----------------------------

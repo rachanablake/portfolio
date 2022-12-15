@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kantumruy+Pro&family=Lora:ital@1&family=Montserrat&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Courgette&family=Kalam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Lobster&display=swap");
 :root {
   --header-height: 56px;
   /*Color mode HSL Chue, saturation, lightness)*/
@@ -11,10 +12,10 @@
   --container-color: #F1F2F2;
   --gradient-color: linear-gradient (180deg, hsla(207, 48%, 72%, 0), hsla(207, 65%, 65%, 1));
   --body-font: "Montserrat", sans-serif;
-  --title-font: "Lora", serif;
+  --title-font: "Courgette", cursive;
   --khmer-font: "Kantumruy Pro", sans-serif;
   --biggest-font-size: 24px;
-  --hi-font-size: 24px;
+  --h1-font-size: 24px;
   --h2-font-size: 20px;
   --h3-font-size: 16px;
   --normal-font-size: 15px;
@@ -84,6 +85,7 @@ img {
 .grid {
   display: grid;
   gap: 24px;
+  justify-content: center;
 }
 
 .section {
@@ -504,10 +506,10 @@ img {
 }
 
 .projects__container {
-  overflow: inherit;
+  overflow: initial;
 }
 
-.projects__container {
+.projects__content {
   display: grid;
   justify-content: center;
 }
@@ -540,14 +542,19 @@ img {
 
 .projects__button i {
   font-size: 18px;
-  transition: transform, 3s;
+  transition: transform 0.25s;
 }
 
 .projects__button:hover i {
   transform: translateX(4px);
 }
 
-.project__container .swiper-butuuon-prev, .projects__container, .swiper-button_nex {
+.projects__container .swiper-button-prev::after,
+.projects__container .swiper-button-next::after {
+  content: "";
+}
+
+.projects__container .swiper-button-prev .projects__container .swiper-button-next {
   width: initial;
   height: inherit;
   margin: initial;
@@ -555,7 +562,104 @@ img {
   color: var(--title-color);
 }
 
-.projects__container .swiper-button-nex {
+.projects__container .swiper-button-prev {
+  left: -16px;
+  top: 72px;
+}
+
+.projects__container .swiper-button-next {
   right: -16px;
   top: 72px;
+}
+
+.projects__container .swiper-slide {
+  margin-bottom: 72px;
+}
+
+.projects__container .swiper-button-prev,
+.projects__container .swiper-button-next {
+  width: initial;
+  height: initial;
+  margin: initial;
+  font-size: 40px;
+  color: var(--title-font);
+}
+
+.projects__container .swiper-slide-bullets {
+  bottom: 0;
+}
+
+.projects__container .swiper-pagination-bullet {
+  background-color: var(--text-color-light);
+  opacity: initial;
+}
+
+.projects__container .swiper-pagination-bullet-active {
+  background-color: var(--title-color);
+}
+
+.testimonial {
+  position: relative;
+}
+
+.testimonial__content {
+  text-align: center;
+}
+
+.testimonial__descripition {
+  font-family: var(--title-font);
+  color: var(--title-color);
+  margin-bottom: 22px;
+}
+
+.testimonial__name {
+  font-family: var(--body-font);
+  font-size: var(--small-font-size);
+  margin-bottom: 4px;
+}
+
+.testimonial__stubtitle {
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
+}
+
+.testimonial__img {
+  width: 70px;
+  transform: rotate(30deg);
+  position: absolute;
+  top: 80px;
+  right: -24px;
+  opacity: 0.1;
+}
+
+.testimonial__container .swiper-slide {
+  margin-bottom: 34px;
+}
+
+.testimonial__container .swiper-button-prev::after,
+.testimonial__container .swiper-button-next::after {
+  content: "";
+}
+
+.testimonial__container .swiper-button-prev,
+.testimonial__container .swiper-button-next {
+  width: initial;
+  height: initial;
+  top: initial;
+  bottom: 0px;
+  font-size: 36px;
+  color: var(--title-font);
+}
+
+.testimonial__container .swiper-button-prev {
+  left: calc(50% - 48px);
+}
+
+.testimonial__container .swiper-button-next {
+  right: calc(50% - 48px);
+}
+
+.testimonial__container .swiper-button-disabled {
+  opacity: initial;
+  color: var(--text-color-light);
 }/*# sourceMappingURL=style.css.map */
