@@ -23,9 +23,9 @@
 
     //-------------------------------- Font and typography -----------------------------------
 
-    --body-font: 'Montserrat', sans-serif;
+    --body-font: 'Courgette', cursive;
     // --title-font: 'Lora', serif;
-    --title-font: 'Courgette', cursive;
+    --title-font: 'Montserrat', sans-serif;
     --khmer-font: 'Kantumruy Pro', sans-serif;
     --biggest-font-size: 24px;
     --h1-font-size: 24px;
@@ -77,6 +77,7 @@ body{
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
     color: var(--text-color);
+    transition: .7s;
 }
 
 h1,h2,h3{
@@ -99,10 +100,56 @@ img{
 }
 
 //-------------------------------- Theme -----------------------------------
+.nav__button{
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+}
+
+.change-theme{
+    font-size: 22px;
+    color: var(--title-color);
+    cursor: pointer;
+    transition: color .3s;
+}
 
 //-------------------------------- Variable Dark Theme -----------------------------------
+body.dark-theme{
+    --title-color: #FCFCFC;
+    --text-color: #F1F2F2;
+    --body-color: #3F4244;
+    --container-color: #44474A;
+}
 
 //-------------------------------- Color Change in Same Part of the Website, in the light theme -----------------------------------
+.dark-theme .nav, .dark-theme .nav__menu, .dark-theme .scrollup{
+    background-color: var(--container-color);
+    box-shadow: 0 4px 20px hsla(207, 24%, 35%, .4);
+}
+
+.dark-theme .home__shape-wave, .dark-theme .home__shape-circle, .dark-theme .qualification__img, .dark-theme .testimonial__img{
+    filter: invert(1);
+}
+
+.dark-theme .home__social-link{
+    color: var(--title-color);
+}
+
+.dark-theme .section__border{
+    border-bottom: 1px solid #686F77;
+}
+
+.dark-theme::-webkit-scrollbar{
+    background-color: #2C2F38;
+}
+
+.dark-theme::-webkit-scrollbar-thumb{
+    background-color: #3F454D;
+}
+
+.dark-theme::-webkit-scrollbar-thumb:hover{
+    background-color: #626A70;
+}
 
 //-------------------------------- Reusable CSS Classe -----------------------------------
 .container{
@@ -235,6 +282,9 @@ img{
 } 
 
 // Active Link
+.active-link{
+    color: var(--title-color);
+}
 
 //-------------------------------- Home -----------------------------------
 .home__container{
@@ -262,6 +312,7 @@ img{
     justify-self: center;
     border-radius: 100px;
     place-items: center;
+    transition: .7s;
 }
 
 .home__profil{
@@ -382,6 +433,7 @@ img{
     border-radius: 100px;
     place-items: center;
     margin-bottom: 18px;
+    transition: .7s;
 }
 
 .skills__blob img{
@@ -493,6 +545,7 @@ img{
     text-align: center;
     padding: 56px 16px;
     border-radius: 15px;
+    transition: .7s;
 }
 
 .services__card i{
@@ -792,14 +845,184 @@ img{
     font-size: var(--smaller-font-size);
     font-weight: var(--font-medium);
     padding: 4px;
+    transition: .7s;
 }
 
-// .contact__form-area{
-//     height: 160px;
-// }
+.contact__form-area{
+    height: 160px;
+}
 
-// .contact__form-area textarea{
-//     resize: none;
-// }
+.contact__form-area textarea{
+    resize: none;
+}
 
-// Status Color
+.contact__form .contact__button{
+    border: none;
+    background: none;
+    font-size: var(--h2-font-size);
+    font-family: var(--title-font);
+    font-weight: var(--font-semi-bold);
+    cursor: pointer;
+    outline: none;
+    margin-top: 12px;
+}
+
+.contact__form .contact__button i{
+    font-size: 24px;
+    font-weight: initial;
+}
+
+.contact__message{
+    font-size: var(--small-font-size);
+    position: absolute;
+    bottom: 44.8px;
+    left: 24px;
+}
+
+.color-blue{
+    color: var(--first-color);
+}
+
+.color-red{
+    color: #DC0000;
+}
+
+//-------------------------------- Footer -----------------------------------\
+.footer__container{
+    padding: 48px 0  112px;
+    text-align: center;
+}
+
+.footer__title{
+    font-size: var(--h1-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: 16px;
+}
+
+.footer__list, .footer__social{
+    display: flex;
+    justify-content: center;
+}
+
+.footer__list{
+    margin: 40px 0;
+    column-gap: 40px;
+}
+
+.footer__link{
+    color: var(--title-color);
+}
+
+.footer__link:hover{
+    text-decoration: underline;
+}
+
+.footer__social{
+    column-gap: 20px;
+}
+
+.footer__social-link{
+    font-size: 20px;
+    color: var(--title-color);
+    transition: .3s;
+}
+
+.footer__social-link:hover{
+    transform: translateY(-2.4px);
+}
+
+.footer__copy{
+    display: block;
+    margin-top: 72px;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
+
+//-------------------------------- Scroll Bar -----------------------------------\
+::-webkit-scrollbar{
+    width: 9px;
+    border-radius: 8px;
+    background-color: #E4E5E7;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #D0D3D8;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #A6AAAB;
+}
+
+//-------------------------------- Scroll Up -----------------------------------
+.scrollup{
+    position: fixed;
+    right: 16px;
+    bottom: -30%;
+    background-color: var(--body-color);
+    box-shadow: 0 1px 6px #6C747A;
+    display: inline-flex;
+    padding: 5.6px;
+    border-radius: 4px;
+    font-size: 16.6px;
+    color: var(--title-color);
+    z-index: var(--z-tooltip);
+    transition: bottom .3s,.3s;
+}
+
+.scrollup:hover{
+    transform: translateY(-4px);
+}
+
+//-------------------------------- SHOW SCROLL -----------------------------------
+.show-scroll{
+    bottom: 120px;
+}
+
+//-------------------------------- BREAKPOINTS -----------------------------------
+// Small devices
+@media screen and (max-width: 340px){
+    .container{
+        margin-inline: 16px;
+    }
+    
+    .nav__menu{
+        padding-bottom: 64px;
+    }
+
+    .nav__list{
+        gap: 16px 20px;
+    }
+
+    .skills__info{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects__image{
+        width: 200px;
+        justify-self: center;
+    }
+}
+
+// Medium Devices
+@media screen and (min-width: 576px){
+    .nav, .nav__menu{
+        width: 380px;
+    }
+
+    .nav{
+        margin: 0 auto;
+    }
+
+    .skills__container{
+        justify-content: center;
+    }
+
+    .projects__container, .testimonial__container{
+        width: 400px;
+    }
+
+    .projects__container{
+        overflow: hidden;
+    }
+}
